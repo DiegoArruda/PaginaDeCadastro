@@ -46,5 +46,3 @@ btnEntrar.addEventListener("click", () => {
     alert("Usuário não existe!");
   }
 });
-
-/* export { usuarios }; */
