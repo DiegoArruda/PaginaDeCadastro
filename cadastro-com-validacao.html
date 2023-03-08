@@ -22,7 +22,7 @@
 
   <body>
     <div class="container">
-      <form class="col g-3 needs-validation" novalidate>
+      <form name="formuser" class="col g-3 needs-validation" novalidate>
         <h2>Crie sua conta!</h2>
         <div class="linha"></div>
         <div class="col-md-7">
@@ -46,6 +46,7 @@
             required
           />
         </div>
+        <!-- usar o on-focus para comparar as senhas  -->
         <div class="col-md-7">
           <label for="password" class="form-label"></label>
           <input
@@ -56,21 +57,25 @@
             required
           />
         </div>
+        <!-- usar o onfocus para verificar senhas iguais -->
         <div class="col-md-7">
           <label for="passwordConf" class="form-label"></label>
           <input
             type="password"
             class="form-control"
+            name="password"
             placeholder="Confirmar senha"
             id="passwordConf"
             required
           />
         </div>
+
         <div class="col-md-7">
           <div class="form-check">
             <input
               class="form-check-input"
               type="checkbox"
+              name="passwordConf"
               value=""
               id="invalidCheck"
               required
@@ -89,7 +94,7 @@
             class="btn cor col-md-12"
             type="submit"
             id="buttonCadastro"
-            onclick="enviar()"
+            onclick="confereSenha()"
           >
             Cadastrar
           </button>

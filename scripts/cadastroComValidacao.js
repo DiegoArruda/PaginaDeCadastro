@@ -20,44 +20,31 @@ let usuarios = [
     form.addEventListener(
       "submit",
       (event) => {
-        if (!form.checkValidity()) {
+        if (form.checkValidity()) {
           event.preventDefault();
           event.stopPropagation();
         }
 
         form.classList.add("was-validated");
 
-        const button = document.getElementById("buttonCadastro");
-
-        button.addEventListener("click", function () {
-          const nomeUsuario = document.getElementById("usuario").value;
-          const emailUsuario = document.getElementById("email").value;
-          const senhaUsuario = document.getElementById("password").value;
-          let user = {
-            nome: nomeUsuario,
-            email: emailUsuario,
-            senha: senhaUsuario,
-          };
-          usuarios.push(user);
-        });
+        const nomeUsuario = document.getElementById("usuario").value;
+        const emailUsuario = document.getElementById("email").value;
+        const senhaUsuario = document.getElementById("password").value;
+        const senhaConfirmacao = document.getElementById("passwordConf").value;
+        if (senhaUsuario !== senhaConfirmacao) {
+          alert("Senhas não coincidem");
+          return;
+        }
+        let user = {
+          nome: nomeUsuario,
+          email: emailUsuario,
+          senha: senhaUsuario,
+        };
+        usuarios.push(user);
         console.log(usuarios);
       },
       false
     );
   });
 })();
-
-function enviar() {
-  const nomeUsuario = document.getElementById("usuario").value;
-  const emailUsuario = document.getElementById("email").value;
-  const senhaUsuario = document.getElementById("password").value;
-
-  let usuario = {
-    nome: nomeUsuario,
-    email: emailUsuario,
-    senha: senhaUsuario,
-  };
-
-  usuarios.push(usuario);
-}
 console.log(usuarios);
