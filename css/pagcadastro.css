@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+}
+
+.container form {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.container .imagem-esquerda {
+  width: 450px;
+  height: 450px;
+}
+
+.container form .linha {
+  border-top: 0.1px solid #dedede;
+  width: 65%;
+}
+
+.container form div input {
+  border-radius: 3px !important;
+  border: 1px solid #dedede;
+}
+
+div .cor {
+  background: #6c757d;
+  color: white;
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+
+div .cor:hover {
+  background: #585d62;
+  color: white;
+  transform: scale(1.01);
+}

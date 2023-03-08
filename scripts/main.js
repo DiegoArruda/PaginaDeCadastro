@@ -23,7 +23,7 @@ const captcha = document.getElementById("resposta");
 const validacao = document.getElementById("aleatorio");
 let num1 = Math.floor(Math.random() * 10);
 let num2 = Math.floor(Math.random() * 10);
-validacao.innerHTML = (`Resolver a operação: ${num1} + ${num2} =`);
+validacao.innerHTML = `Resolver a operação: ${num1} + ${num2} =`;
 let resposta = num1 + num2;
 
 btnEntrar.addEventListener("click", () => {
@@ -35,12 +35,11 @@ btnEntrar.addEventListener("click", () => {
 
   if (usuarioValido !== undefined) {
     if (usuarioValido.senha === senha) {
-      if (certa === resposta){
-        window.location.pathname = "/app.html"
-      } else{
-        alert("rever resposta")
+      if (certa === resposta) {
+        window.location.pathname = "/app.html";
+      } else {
+        alert("rever resposta");
       }
-      
     } else {
       alert("Senha incorreta!");
     }
@@ -48,3 +47,5 @@ btnEntrar.addEventListener("click", () => {
     alert("Usuário não existe!");
   }
 });
+
+module.exports = main;
