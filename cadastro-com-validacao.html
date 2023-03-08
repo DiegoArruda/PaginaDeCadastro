@@ -22,7 +22,7 @@
 
   <body>
     <div class="container">
-      <form class="col g-3 needs-validation" novalidate method="post">
+      <form class="col g-3 needs-validation" novalidate>
         <h2>Crie sua conta!</h2>
         <div class="linha"></div>
         <div class="col-md-7">
@@ -85,7 +85,14 @@
           </div>
         </div>
         <div class="col-7">
-          <button class="btn cor col-md-12" type="submit">Confirme</button>
+          <button
+            class="btn cor col-md-12"
+            type="submit"
+            id="buttonCadastro"
+            onclick="enviar()"
+          >
+            Cadastrar
+          </button>
         </div>
         <div class="col-md-7">
           <div class="form-check">
