@@ -1,4 +1,4 @@
-/* const main = require("./main") */
+/* import { usuarios } from "./main"; */
 (() => {
   "use strict";
 
@@ -21,5 +21,16 @@
     );
   });
 })();
+
+function validarFormulario() {
+  const senha = document.getElementsByID("password").value;
+  const senhaConfirmacao = document.getElementsByID("passwordConf").value;
+
+  if (senha !== senhaConfirmacao) {
+    alert("As senhas não são iguais");
+    return false;
+  }
+
+  return true;
+}
 /* console.log(usuarios); */
-/* module.exports = cadastroComValidacao; */

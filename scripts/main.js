@@ -32,7 +32,6 @@ btnEntrar.addEventListener("click", () => {
   const certa = parseInt(captcha.value);
 
   let usuarioValido = usuarios.find((usuario) => usuario.email === email);
-
   if (usuarioValido !== undefined) {
     if (usuarioValido.senha === senha) {
       if (certa === resposta) {
@@ -48,4 +47,4 @@ btnEntrar.addEventListener("click", () => {
   }
 });
 
-module.exports = main;
+/* export { usuarios }; */
